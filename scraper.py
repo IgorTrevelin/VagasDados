@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from chromedriver_py import binary_path
 
-dumpfolder = os.path.join(os.path.abspath(os.path.dirname(__file__)), "data")
+dumpfolder = os.path.join(os.path.abspath(os.path.dirname(__file__)), "dados")
 
 
 def get_linkedin_jobs(n_jobs=1000):
@@ -147,24 +147,23 @@ def get_linkedin_jobs(n_jobs=1000):
         finally:
             time.sleep(5)
 
-        if len(job_link) % 5 == 0:
-            job_data = pd.DataFrame(
-                {
-                    "Date": date[:n_jobs],
-                    "Company": company_name[:n_jobs],
-                    "Title": job_title[:n_jobs],
-                    "Location": location[:n_jobs],
-                    "Description": job_description[:n_jobs],
-                    "Level": seniority[:n_jobs],
-                    "Type": emp_type[:n_jobs],
-                    "Function": job_func[:n_jobs],
-                    "Industry": industries[:n_jobs],
-                    "Link": job_link[:n_jobs],
-                }
-            )
+        job_data = pd.DataFrame(
+            {
+                "Data": date[:n_jobs],
+                "Empresa": company_name[:n_jobs],
+                "Título": job_title[:n_jobs],
+                "Localização": location[:n_jobs],
+                "Descrição": job_description[:n_jobs],
+                "Nível": seniority[:n_jobs],
+                "Tipo": emp_type[:n_jobs],
+                "Função": job_func[:n_jobs],
+                "Indústria": industries[:n_jobs],
+                "Link": job_link[:n_jobs],
+            }
+        )
 
-            job_data["Description"] = job_data["Description"].str.replace("\n", " ")
-            job_data.to_excel(os.path.join(dumpfolder, "linkedin.xlsx"), index=False)
+        job_data["Descrição"] = job_data["Descrição"].str.replace("\n", " ")
+        job_data.to_excel(os.path.join(dumpfolder, "linkedin.xlsx"), index=False)
 
     driver.quit()
 
