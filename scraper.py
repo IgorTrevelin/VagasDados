@@ -1,4 +1,3 @@
-import os
 import re
 import time
 import threading
@@ -11,7 +10,6 @@ from chromedriver_py import binary_path
 from joblib import Parallel, delayed
 from bs4 import BeautifulSoup
 
-dumpfolder = os.path.join(os.path.abspath(os.path.dirname(__file__)), "dados")
 writer = pd.ExcelWriter("dados/vagas.xlsx", engine="auto")
 
 """
