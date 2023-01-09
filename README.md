@@ -12,8 +12,8 @@ Este projeto tem como objetivo a construção de um dashboard para auxiliar a bu
 
 Uma versão demo deste dashboard pode ser acessado através do link abaixo:
 
-[Dashboard Vagas em Dados](https://app.powerbi.com/view?r=eyJrIjoiNjcxYTE0MGQtMWU1NC00ODNkLWJhNTAtZTRkNjIwZDk1ZWY2IiwidCI6IjhiMjdlNzgwLTcyMDgtNDM4Mi1hYzQxLTBlMWQ4NTA0NjJlNiJ9)
+[Dashboard Vagas em Dados](https://app.powerbi.com/view?r=eyJrIjoiNWZiMzc1MTgtMzE3MS00Njk1LWFmMGYtZTg5MzczZjgxMjMyIiwidCI6IjhiMjdlNzgwLTcyMDgtNDM4Mi1hYzQxLTBlMWQ4NTA0NjJlNiJ9)
 
 ## Preview
 
-<img src="https://i.imgur.com/sFIRqRX.png">
+<img src="https://i.imgur.com/o5nJODS.png">
